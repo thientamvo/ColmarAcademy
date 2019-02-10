@@ -1,4 +1,4 @@
-*{border: 1px red solid;}
+
 html {
   font-size: 16px;
 }
@@ -343,7 +343,8 @@ main a:hover, main a:active {
     border-bottom: 0.25rem solid rgba(255,255,255,1);
     font-weight: bold;
     font-size: 1.25rem;
-    transition: color 0.5s;
+    transition: color 0.75s;
+    transition: border 0.75s;
   }
   .learning a:hover, .learning a:active {
     border-top: 0.25rem solid rgba(216,216,216,1);
