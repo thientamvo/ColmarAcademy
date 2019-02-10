@@ -1,4 +1,4 @@
-* {border: 1px solid red!important;}
+*{border: 1px red solid;}
 html {
   font-size: 16px;
 }
@@ -12,17 +12,24 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.mobile {
+  display: none;
+}
 /*--Navigaton bar--*/
 header {
   display: flex;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   max-height: 4rem;
   justify-content:space-between;
+  position: fixed;
+  z-index:1;
+  background-color: white;
+  width: 100%;
+  top:0;
 }
 #logo {
   display: flex;
   align-items: center;
+  padding-left: 1.5rem;
 }
 header img {
   height: 4rem;
@@ -40,10 +47,44 @@ nav ul {
   display: flex;
   flex-direction: row;
   align-items: center;
+  padding-right: 1.5rem;
 }
 nav ul li {
-  margin-left: 1rem;
   font-size: 1.5rem;
+}
+nav ul li a{
+  padding: 0.5rem;
+  transition: background-color 0.5s;
+
+}
+nav ul li a:hover, nav ul li a:active {
+  background-color: rgba(216,216,216,1);
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 4rem;
+  }
+  header #logo {
+    display: none;
+  }
+  header nav {
+    display: none;
+  }
+
+  header .mobile {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+
+  }
+
+  header .mobile img {
+    height: 3rem;
+  }
 }
 /*--top banner--*/
 .banner {
@@ -51,19 +92,27 @@ nav ul li {
   display: flex;
   padding: 2rem 1.5rem;
   justify-content: center;
+  margin-top: 4rem;
 }
 
-.banner img {
-  object-fit: cover;
-  max-width: 60%;
+.banner .image {
+
+  width: 60%;
+  height: auto;
   margin-right: 1.5rem;
+  object-fit: cover;
+}
+
+
+.banner img {
+  width: 100%;
 }
 
 .banner article {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  max-width: 40%;
+  width: 40%;
 }
 
 .banner h1 {
@@ -75,8 +124,10 @@ nav ul li {
   font-size: 2rem;
   text-align: left;
   margin-top: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
+
+
 .banner a {
   font-size: 1.5rem;
   color: white;
@@ -84,6 +135,38 @@ nav ul li {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   max-width: 40rem;
+  border: 0.5rem solid  rgba(216,216,216,1);
+  transition: border 0.5s;
+}
+.banner a:hover, .banner a:active {
+  border: 0.5rem solid rgba(74,74,74,1);
+}
+@media only screen and (max-width: 600px) {
+  .banner {
+    padding: 0;
+    flex-direction: column;
+  }
+  .banner .image {
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  .banner article {
+    width: 100%;
+    padding: 0;
+  }
+  .banner h1 {
+    margin: 0;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  .banner h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+  .banner a {
+    width: 100%-1rem;
+    margin-bottom: 2rem;
+  }
 }
 /*--Main body--*/
 main {
@@ -93,7 +176,7 @@ main {
 }
 main .dailyNews {
   margin-right: 1.5rem;
-  max-width: 60%;
+  width: 60%;
 }
 
 main article img {
@@ -112,10 +195,13 @@ main article #author {
   font-size: 1rem;
 }
 
-
 /*--main body side column --*/
 main aside {
   width: 40%;
+}
+main a{
+  background-color: transparent;
+  transition: background-color 0.5s;
 }
 
 main .information {
@@ -123,11 +209,13 @@ main .information {
   padding: 1rem;
   text-align: left;
 }
-
-main .information img {
+main .information .image {
   width: 35%;
+}
+main .information img {
+  width: 100%;
+  height: auto;
   object-fit: cover;
-
 }
 
 main .information article {
@@ -156,36 +244,68 @@ main .information article span {
   color: rgba(77,146,227,1);
 }
 
+main a:hover, main a:active {
+  background-color: rgba(216,216,216,1);
+}
+@media only screen and (max-width: 600px) {
+  main .dailyNews {
+    display: none;
+  }
+  main {
+    padding: 0;
+  }
+  main aside {
+    width: 100%;
+  }
+  main aside .image {
+    display: none;
+  }
+  main aside .mobile {
+    display: block;
+  }
+  main aside .information {
+    flex-direction: column;
+  }
+  main aside .information article {
+    width: 100%;
+  }
+}
 /*--Courses --*/
 .learning {
   padding: 1rem 3.5rem;
   background-color: rgba(216,216,216,1);
 }
+
 .learning h2 {
   margin-top: 1rem;
   margin-bottom: 1rem;
   font-size: 3rem;
 }
+
 .learning .majors {
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
 }
-.learning .major {
+.learning a {
   width: 30%;
   padding-bottom: 1.5rem;
   text-align: left;
   background-color: white;
-  margin:1rem;
+  border:1rem solid rgba(216,216,216,1);
+  transition: border 0.5s;
 }
-
+.learning a:hover, .learning a:active {
+  border: 1rem solid rgba(255,255,255,1);
+}
 .learning .major img {
   width: 100%;
   object-fit: cover;
 }
 
 .learning .major h4 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
+  font-weight: bold;
   margin-top: 0;
   margin-bottom: 0.5rem;
   padding-left: 1rem;
@@ -193,8 +313,168 @@ main .information article span {
 .learning .major span {
   margin-top:0;
   padding-left: 1rem;
+  font-size: 1.2rem;
 }
 .learning .major p {
   margin-top:0.5rem;
   padding-left: 1rem;
+}
+@media only screen and (max-width: 600px) {
+  .learning {
+    background-color: inherit;
+    padding: 1rem;
+  }
+  .learning h2 {
+    font-size: 2rem;
+  }
+  .learning .majors {
+    display: none;
+  }
+  .learning .mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .learning .mobile a {
+    width: auto;
+    background-color: rgba(216,216,216,1);
+    border: none;
+    padding: 1rem 1rem;
+    border-top: 0.25rem solid rgba(255,255,255,1);
+    border-bottom: 0.25rem solid rgba(255,255,255,1);
+    font-weight: bold;
+    font-size: 1.25rem;
+    transition: color 0.5s;
+  }
+  .learning a:hover, .learning a:active {
+    border-top: 0.25rem solid rgba(216,216,216,1);
+    border-bottom: 0.25rem solid rgba(216,216,216,1);
+    color: black;
+  }
+}
+/*--thesis section--*/
+.thesis_exhibit h2 {
+  font-size: 3rem;
+  margin-bottom: 0;
+  margin-top: 1rem;
+}
+.thesis {
+  display: flex;
+  padding: 2rem 1.5rem;
+  align-items: flex-start;
+}
+
+ .urban {
+   width: 60%;
+   height: auto;
+   padding-right: 1rem;
+   padding-left: 1rem;
+   padding-top: 1rem;
+   margin-right: 0.5rem;
+   text-align: left;
+   background-color: transparent;
+   transition: background-color 0.5s;
+ }
+
+
+
+ .main_thesis h4 {
+   font-size: 2rem;
+   font-weight: bold;
+   margin-top: 0;
+   margin-bottom: 0.5rem;
+ }
+ .main_thesis p {
+   margin-top: 0;
+ }
+
+ video {
+   width: 100%;
+   margin-bottom: 1.5rem;
+ }
+ .thesis aside {
+   width: 40%;
+ }
+
+ .thesis aside a {
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   text-align: left;
+   background-color: transparent;
+   transition: background-color 0.5s;
+ }
+.thesis a:hover, .thesis a:active {
+  background-color:  rgba(216,216,216,1);
+}
+ .thesis aside a img {
+   padding: 1rem;
+   width: 35%;
+ }
+ .thesis aside a article {
+   width: 65%;
+ }
+.thesis aside a h4 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0;
+}
+.thesis aside a p {
+  margin-bottom: 0;
+}
+@media only screen and (max-width: 600px) {
+
+  .thesis_exhibit {
+    padding:1rem 0 0.5rem 0;
+  }
+  .thesis {
+    padding: 0;
+  }
+  .urban {
+    width: 100%;
+    padding: 0;
+  }
+  .thesis_exhibit aside {
+    display: none;
+  }
+  .thesis_exhibit h2 {
+    font-size: 2em;
+    margin-bottom: 1rem;
+  }
+  video {
+    margin-bottom: 0;
+  }
+  .main_thesis h4, .main_thesis p {
+    display: none;
+  }
+}
+/*--Footer-*/
+footer {
+  padding: 1rem 1.5rem 3rem 1.5rem;
+  border-top: 1px solid rgba(216,216,216,1);
+  display: flex;
+  justify-content: space-between;
+}
+footer span {
+  padding: 0;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin:0;
+}
+
+footer ul li {
+  padding-left: 1rem;
+}
+@media only screen and (max-width:600px) {
+  footer {
+    padding: 1rem 0;
+    display: block;
+  }
+  footer ul {
+    display: none;
+  }
 }

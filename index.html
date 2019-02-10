@@ -21,10 +21,18 @@
             <li><a href="#">Sign in</a></li>
           </ul>
         </nav>
+        <section class="mobile">
+          <img src="./resources/images/ic-logo.svg" alt="black lion logo of Colmar Academy">
+          <img src="./resources/images/ic-on-campus.svg" alt="icon of a chair">
+          <img src="./resources/images/ic-online.svg" alt="icon of a computer screen">
+          <img src="./resources/images/ic-login.svg" alt="icon of a person">
+        </section>
     </header>
     <!--top banner-->
     <section class="banner">
-      <img src="./resources/images/banner.jpg" alt="three students studying at a woden table">
+      <div class="image">
+          <img src="./resources/images/banner.jpg" alt="three students studying at a woden table">
+      </div>
       <article>
         <h1>Learn something new everyday</h1>
         <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
@@ -43,7 +51,12 @@
       </article>
       <aside>
         <a href="#" class="information" id="orientation">
-          <img src="./resources/images/information-orientation.jpg" alt="view from above of several students walking on a brick path">
+          <div class="image">
+            <img src="./resources/images/information-orientation.jpg" alt="view from above of several students walking on a brick path">
+          </div>
+          <div class="mobile">
+            <img src="./resources/images/information-orientation-mobile.jpg" alt="iew from above of several students walking on a brick path">
+          </div>
           <article>
             <h4>Orientation date</h4>
             <p>Tue 10/11 & Wed 10/12:8 8am-3pm</p>
@@ -51,26 +64,44 @@
           </article>
         </a>
         <a href="#" class="information" id="campus">
+          <div class="image">
             <img src="./resources/images/information-campus.jpg" alt="wooden room with multiple students studying and map on the wall">
-            <article>
-              <h4>Our campus</h4>
-              <p>Find which campus is close by you</p>
-              <span>Read more</span>
-            </article>
-        </a>
-        <a href="#" class="information" id="guestLecturer">
-            <img src="./resources/images/information-guest-lecture.jpg" alt="old hister looking lecturer looking into the distance">
+          </div>
+          <div class="mobile">
+            <img src="./resources/images/information-campus-mobile.jpg" alt="iew from above of several students walking on a brick path">
+          </div>
+          <article>
+            <h4>Our campus</h4>
+            <p>Find which campus is close by you</p>
+            <span>Read more</span>
+          </article>
+         </a>
+         <a href="#" class="information" id="guestLecturer">
+           <div class="image">
+             <img src="./resources/images/information-guest-lecture.jpg" alt="old hister looking lecturer looking into the distance">
+           </div>
+           <div class="mobile">
+             <img src="./resources/images/information-guest-lecture-mobile.jpg" alt="iew from above of several students walking on a brick path">
+           </div>
             <article>
               <h4>Our guest lecturer</h4>
               <p>Join a keynote with Oliver Sack about music in medical treatment</p>
               <span>Read more</span>
             </article>
-        </a>
-      </aside>
-    </main>
+         </a>
+        </aside>
+      </main>
       <!-- Courses -->
       <section class="learning">
         <h2>Start learning</h2>
+        <section class="mobile">
+          <a href="#">Software engineering</a>
+          <a href="#">Computer art</a>
+          <a href="#">Design</a>
+          <a href="#">Data</a>
+          <a href="#">Business</a>
+          <a href="#">Marketing</a>
+        </section>
         <section class="majors">
           <a href="#" class="major" id="software">
               <img src="./resources/images/course-software.jpg" alt="two computer screes in the dark">
@@ -112,31 +143,40 @@
       </section>
 
       <!-- Thesis exhibit -->
-      <section class="thesis">
-        <article class="main_thesis">
-          <video src="./resources/videos/thesis.mp4" autoplay poster="posterimage.jpg">
-          </video>
-          <h4>Reimagine urban</h4>
-          <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna.
-            Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique liqula."</p>
-        </article>
-        <aside class="other_thesis">
-          <a class="fisma">
-            <img src="./resources/images/thesis-fisma.jpg" alt="overhead view of a person drawing on papers">
-            <article>
-              <h4>Fisma: Design and Prototype</h4>
-              <p>Designer showcase of new prototype product</p>
-            </article>
-          </a>
-          <a class="now_then">
-            <img src=".resources/images/thesis-now-and-then.jpg" alt="New York city skyline in the fog">
-            <article>
-              <h4>Now and then</h4>
-              <p>Research study about New York</p>
-            </article>
-          </a>
-        </aside>
+      <section class="thesis_exhibit">
+        <h2>Thesis exhibit</h2>
+        <section class="thesis">
+            <a class="urban">
+              <article class="main_thesis">
+              <video autoplay muted loop poster="posterimage.jpg">
+                <source src="./resources/videos/thesis.mp4" type="video/mp4">
+                  Your browser does not support video.
+              </video>
+              <h4>Reimagine urban</h4>
+              <p>"Curabitur vitae libero in ipsum porttitor consequat. Aliquam et commodo lectus, nec consequat neque. Sed non accumsan urna.
+                Phasellus sed consequat ex. Etiam eget magna laoreet, efficitur dolor consequat, tristique liqula."</p>
+              </article>
+            </a>
+
+          <aside class="other_thesis">
+            <a class="fisma">
+              <img src="./resources/images/thesis-fisma.jpg" alt="overhead view of a person drawing on papers">
+              <article>
+                <h4>Fisma: Design and Prototype</h4>
+                <p>Designer showcase of new prototype product</p>
+              </article>
+            </a>
+            <a class="now_then">
+              <img src="./resources/images/thesis-now-and-then.jpg" alt="New York city skyline in the fog">
+              <article>
+                <h4>Now and then</h4>
+                <p>Research study about New York</p>
+              </article>
+            </a>
+          </aside>
+        </section>
       </section>
+
       <!-- Footer -->
       <footer>
         <span id="copyright">© 2016 Colmar Academy. All rights reserved</span>
