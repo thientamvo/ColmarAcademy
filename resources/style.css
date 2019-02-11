@@ -3,7 +3,7 @@ html {
   font-size: 16px;
 }
 body {
-  font-family: Helvetica;
+  font-family: "Noto Sans", Helvetica, sans-serif;
   text-align: center;
   margin: auto;
   color: rgba(74,74,74,1);
@@ -159,11 +159,13 @@ nav ul li a:hover, nav ul li a:active {
     font-size: 2rem;
     margin-bottom: 2rem;
     padding-left: 1rem;
+    padding-right: 1rem;
   }
   .banner h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     padding-left: 1rem;
+    padding-right: 1rem;
   }
   .banner a {
     max-width: 100%;
@@ -187,6 +189,7 @@ main article img {
 
 main article h2 {
   font-size: 3rem;
+  font-family: "Roboto", Helvetica, sans-serif;
 }
 
 main article p {
@@ -238,6 +241,7 @@ main .information article p {
   font-size: 1.5rem;
   margin-top: 0;
   margin-bottom: 0.5rem;
+
 }
 
 main .information article span {
@@ -270,6 +274,9 @@ main a:hover, main a:active {
   }
   main aside .information article {
     width: 100%;
+  }
+  main aside .information h4, main aside .information p, main aside .information span {
+    padding-right: 1rem;
   }
 }
 /*--Courses --*/
