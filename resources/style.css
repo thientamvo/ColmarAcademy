@@ -34,11 +34,11 @@ header {
 header img {
   height: 4rem;
 }
-header span {
+header section span {
   font-size: 2rem;
   color: rgba(180,180,180,1);
 }
-header span strong {
+header section span strong {
   color: rgba(74,74,74,1);
 }
 
@@ -53,13 +53,16 @@ nav ul li {
   font-size: 1.5rem;
 }
 nav ul li a{
+
   padding: 0.5rem;
   transition: background-color 0.5s;
-
 }
+
 nav ul li a:hover, nav ul li a:active {
   background-color: rgba(216,216,216,1);
 }
+
+
 
 @media only screen and (max-width: 880px) {
   header {
@@ -475,9 +478,18 @@ footer ul {
   align-items: center;
   margin:0;
 }
-
 footer ul li {
   padding-left: 1rem;
+  width: 5rem;
+}
+footer ul li span {
+  padding-right: 0.5rem;
+}
+footer ul li:hover span {
+  display:none;
+}
+footer section ul li a:hover {
+  color: black;
 }
 @media only screen and (max-width:880px) {
   footer {
@@ -487,4 +499,5 @@ footer ul li {
   footer ul {
     display: none;
   }
+
 }
